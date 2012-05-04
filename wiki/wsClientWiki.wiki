@@ -2,6 +2,10 @@ This is Step by Step guideline how to use this source codes/Projects.
 
 The "Jinouts Android Web Service client" is an effort to develop an open source Web service client generator in android platform.
 
+http://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Intel_Classmate_PC.jpg/262px-Intel_Classmate_PC.jpg
+
+
+
 
 = Details =
 
