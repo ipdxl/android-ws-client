@@ -1,0 +1,18 @@
+
+<project name="MakeJinoutsWSJar" default="jinoutsWSjar" basedir=".">
+
+<property name="lib.dir" location="lib" />
+<property name="classes.dir" location="bin/classes" />
+<property name="mod-lib.dir" location="mod-lib" />
+	
+	
+	<target name="jinoutsWSjar" >
+			<echo message="Jinouts WS Jar" />
+		
+			<jar  description="Make Jinouts WS Jar"   jarfile="lib/jinouts-ws.jar">
+				 													
+					 <fileset dir="${classes.dir}" includes="org/jinouts/**,hu/**" excludes="org/jinos/ws/client/**"/>		
+			</jar>		
+	</target>
+ 
+</project>
