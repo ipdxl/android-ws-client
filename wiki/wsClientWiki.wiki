@@ -11,7 +11,7 @@ To use this "Android Web Service Client Generation tool", we have to follow the 
 1. Get the "android-ws-client-1.0.zip" file from the download link of this project( "http://code.google.com/p/android-ws-client/downloads/list" ).
 
 2. Unzip it and run the "runJinoutsUI.bat" batch file.
-3. It will show you a UI where you can input the ".wsdl" file url and the location of the client stub.
+3. It will show you a UI where you can input the ".wsdl" file url and the location of the client stub. Click the button “Generate WS Client Stub”.
 
 4. Get the libraries (.jar) from the folder "andr-lib" and make sure that you put these libs to the classpath of your android project (say make a folder named "lib" in your project and put the jars there and add those library in the build path).
 
@@ -102,8 +102,6 @@ So, that's all. Hope, In android web service development out life will be a litt
 
 
  
-
-
 
 
 
