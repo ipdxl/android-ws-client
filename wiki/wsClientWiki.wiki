@@ -29,12 +29,13 @@ To use this "Android Web Service Client Generation tool", we have to follow the 
 
 11. As it will access the network give the application network access by the following configuration at the end of ""
 
+{{{
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	
 	<uses-feature android:name="android.hardware.location.network" />
-
+}}}
 12. To consume the service first we have to instantiate the service, then get the java endpoint port to call the service. For this example it will be like this :
 
 {{{
@@ -50,7 +51,7 @@ LoginServiceResponse resp = login.login ( user, passwd );
 Here we get the response.
 
 13. Lets consume the service asynchronously. For this, Lets define a "AsyncTask" to consume the service in background. So, the class will be like  the following :
-
+{{{
 private class LoginServiceTask extends AsyncTask<Void, Void, LoginServiceResponse>
 {
 
@@ -87,6 +88,7 @@ respTextView.setText ( "Couldn't get Response" );
 }
 }
 
+}}}
 Look, here I have shown the response in another text View.
 
 14. You can get the full project - "AndroidWSApp.zip" from the download tab. 
