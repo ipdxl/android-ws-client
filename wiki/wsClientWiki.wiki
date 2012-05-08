@@ -37,6 +37,7 @@ To use this "Android Web Service Client Generation tool", we have to follow the 
 
 12. To consume the service first we have to instantiate the service, then get the java endpoint port to call the service. For this example it will be like this :
 
+{{{
 LoginService service = new LoginService ( );
 Login login = service.getLoginPort ( );
 EditText userEditText = (EditText)findViewById ( R.id.userIdText );
@@ -45,7 +46,7 @@ EditText passEditText = (EditText)findViewById ( R.id.passEditText );
 String user = userEditText.getText ( ).toString ( );
 String passwd = passEditText.getText ( ).toString ( );
 LoginServiceResponse resp = login.login ( user, passwd );
-
+}}}
 Here we get the response.
 
 13. Lets consume the service asynchronously. For this, Lets define a "AsyncTask" to consume the service in background. So, the class will be like  the following :
@@ -102,4 +103,3 @@ So, that's all. Hope, In android web service development out life will be a litt
 
 
  
-
