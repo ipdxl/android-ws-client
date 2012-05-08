@@ -95,9 +95,9 @@ Look, here I have shown the response in another text View.
 
 15. Acknowledgement :
     
-        *a. I have used the "cxf distribution" (http://cxf.apache.org) to get the client stub (java code) from the wsdl.
+        #a. I have used the "cxf distribution" (http://cxf.apache.org) to get the client stub (java code) from the wsdl.
         
-*b. Get some utility classes from Soap UI source code (http://www.soapui.org/).
+#b. Get some utility classes from Soap UI source code (http://www.soapui.org/).
         
 *c. Used some two classes from the Android soap (http://wiki.javaforum.hu/display/ANDROIDSOAP/Home). Definitely I have modify some of it.
         
