@@ -96,9 +96,12 @@ Look, here I have shown the response in another text View.
 15. Acknowledgement :
     
         a. I have used the "cxf distribution" (http://cxf.apache.org) to get the client stub (java code) from the wsdl.
-        b. Get some utility classes from Soap UI source code (http://www.soapui.org/).
-        c. Used some two classes from the Android soap (http://wiki.javaforum.hu/display/ANDROIDSOAP/Home). Definitely I have modify some of it.
-        d. And definitely I have used some third party jars which are explicitly in the project.
+        
+:b. Get some utility classes from Soap UI source code (http://www.soapui.org/).
+        
+c. Used some two classes from the Android soap (http://wiki.javaforum.hu/display/ANDROIDSOAP/Home). Definitely I have modify some of it.
+        
+d. And definitely I have used some third party jars which are explicitly in the project.
 
 
 So, that's all. Hope, In android web service development out life will be a little bit easier if you used this !!! Let's try it !!!!
