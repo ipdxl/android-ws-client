@@ -1,6 +1,6 @@
 This is Step by Step guideline how to use this source codes/Projects.
 
-The "Jinouts Android Web Service client" is an effort to develop an open source Web service client generator in android platform.
+The [http://code.google.com/p/android-ws-client Jinouts Android Web Service client]  is an effort to develop an open source Web service client generator in android platform.
 
 I have googled to have an "easy-to-use" web service client for the android platform. I didn't find an easy one so I decided to develop one.
 
