@@ -36,21 +36,40 @@ To use this "Android Web Service Client Generation tool", we have to follow the 
 	
 	<uses-feature android:name="android.hardware.location.network" />
 }}}
-12. To consume the service first we have to instantiate the service, then get the java endpoint port to call the service. For this example it will be like this :
+
+12. To consume any service you just need three simple line/step.
+    * First instantiate the service,
+    * Secondly, Get endpoint port to call the service. 
+    * And Thirdly, Call the service just like method call.
+
+For this example it will be like this :
+
+Before calling the Service set the thread policy to allow the web service call sychronously
 
 {{{
+StrictMode.setThreadPolicy( new StrictMode.ThreadPolicy.Builder().detectDiskReads().detectDiskWrites().detectNetwork().detectAll ( ).penaltyLog().build());  
+    			
+}}}
+
+{{{
+
+// Here Just two lines to make the web service ready to call
 LoginService service = new LoginService ( );
 Login login = service.getLoginPort ( );
+
 EditText userEditText = (EditText)findViewById ( R.id.userIdText );
 EditText passEditText = (EditText)findViewById ( R.id.passEditText );
 	
 String user = userEditText.getText ( ).toString ( );
 String passwd = passEditText.getText ( ).toString ( );
+
+// Here Call the Web service, The simplest way
 LoginServiceResponse resp = login.login ( user, passwd );
+
 }}}
 Here we get the response.
 
-13. Lets consume the service asynchronously. For this, Lets define a "AsyncTask" to consume the service in background. So, the class will be like  the following :
+13. Lets consume the service asynchronously- Its the preferred way actually. For this, Lets define a "AsyncTask" to consume the service in background. So, the class will be like  the following :
 {{{
 private class LoginServiceTask extends AsyncTask<Void, Void, LoginServiceResponse>
 {
@@ -58,13 +77,18 @@ private class LoginServiceTask extends AsyncTask<Void, Void, LoginServiceRespons
 @Override
 protected LoginServiceResponse doInBackground ( Void... params )
 {
+
+// Here Just two lines to make the web service ready to call
 LoginService service = new LoginService ( );
 Login login = service.getLoginPort ( );
+
+
 EditText userEditText = (EditText)findViewById ( R.id.userIdText );
 EditText passEditText = (EditText)findViewById ( R.id.passEditText );
-
 String user = userEditText.getText ( ).toString ( );
 String passwd = passEditText.getText ( ).toString ( );
+
+// Here Call the Web service, The simplest way
 LoginServiceResponse resp = login.login ( user, passwd );
 
 return resp;
