@@ -27,7 +27,7 @@ To use this "Android Web Service Client Generation tool", we have to follow the 
 
 10. Create two text field "user name" and "password"  and a button to login. In the button "onClick" lets put "callWebService". Lets create a function named "callWebService" in the activity class to implement this, So that  when a user click this button with the user name and password this method will be called.
 
-11. As it will access the network give the application network access by the following configuration at the end of ""
+11. As it will access the network give the application network access by the following configuration at the end of "AndroidManifest.xml" file.
 
 {{{
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
