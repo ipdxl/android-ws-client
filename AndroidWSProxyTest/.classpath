@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="src" path="wsclient"/>
+	<classpathentry kind="src" path="pubWeb"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/AndroidWSProxyClient"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry kind="lib" path="lib/junit-4.4.jar"/>
+	<classpathentry kind="lib" path="lib/soap-xmlbeans-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/soapUI.jar"/>
+	<classpathentry kind="lib" path="lib/wsdl4j-1.6.2-fixed.jar"/>
+	<classpathentry kind="lib" path="lib/xml-apis.jar"/>
+	<classpathentry kind="lib" path="lib/jinouts-ws-support.jar"/>
+	<classpathentry kind="lib" path="lib/xmlpull_1_0_5.jar"/>
+	<classpathentry kind="lib" path="lib/xpp3-1.1.3.4.C.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.1.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.1.4.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils-1.7.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-1.3.2.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

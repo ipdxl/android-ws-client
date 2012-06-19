@@ -1,0 +1,61 @@
+
+<project name="AndroidWsClientGen" default="dist" basedir=".">
+
+<property name="lib.dir" location="lib" />
+<property name="classes.dir" location="bin" />
+<property name="and-lib.dir" location="andr-lib" />
+<property name="dist.dir" location="dist" />
+<property name="conf.dir" location="conf" />	
+
+	
+	<target name="jinoutsWSGenjar" >
+			<echo message="Jinouts WS Jar" />
+		
+			<jar  description="Make Jinouts WS Jar"   jarfile="lib/jinouts-ui.jar">
+				 													
+					 <fileset dir="${classes.dir}" includes="org/jinouts/**" />		
+			</jar>
+		
+		<mkdir dir="${dist.dir}"/>
+		<copy todir="${dist.dir}">
+			<fileset dir="${lib.dir}"/>
+		</copy>
+		
+	</target>
+	
+	<target name="dist"  depends="jinoutsWSGenjar">
+			
+		<echo message="Copying Dir and files" />
+		<delete dir="${dist.dir}"/>
+			
+		<mkdir dir="${dist.dir}"/>
+		<mkdir dir="${dist.dir}/lib"/>
+		<mkdir dir="${dist.dir}/andr-lib"/>
+		<mkdir dir="${dist.dir}/conf"/>	
+		
+		<copy todir="${dist.dir}">
+			<fileset dir="." includes="**.bat"/>
+		</copy>
+		
+		<copy todir="${dist.dir}/andr-lib">
+			<fileset dir="${and-lib.dir}"/>
+		</copy>
+		
+		<copy todir="${dist.dir}/lib">
+			<fileset dir="${lib.dir}"/>
+		</copy>
+		
+		 <copy todir="${dist.dir}/conf">
+			<fileset dir="${conf.dir}"/>
+		</copy>
+		
+			
+	</target>
+	
+	<target name="ZipDist">
+		<zip destfile="./jinouts-AndroidWSClient-1.0.zip"		basedir="${dist.dir}">
+		</zip>
+	</target>
+	
+ 
+</project>

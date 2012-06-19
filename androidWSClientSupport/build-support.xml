@@ -1,0 +1,76 @@
+
+<project name="Support Jar" default="jinoutsJar" basedir=".">
+
+<property name="lib.dir" location="lib" />
+<property name="classes.dir" location="bin" />
+<property name="mod-lib.dir" location="mod-lib" />
+<property name="dist.dir" location="dist" />	
+	
+
+<target name="jinoutsJar" depends="combinejar">
+    <taskdef name="jarjar" classname="com.tonicsystems.jarjar.JarJarTask"
+        classpath="${lib.dir}/jarjar-1.1.jar"/>
+    <jarjar jarfile="${dist.dir}/jinouts-ws-support.jar">
+       
+           	
+    	<zipgroupfileset dir="${mod-lib.dir}" includes="android-ws-combine.jar"/>
+
+        <rule pattern="javax.**" result="org.jinouts.@1"/>
+    	<rule pattern="java.awt.**" result="org.jinouts.awt.@1"/>
+    	<rule pattern="java.beans.**" result="org.jinouts.beans.@1"/>
+    	<rule pattern="org.xml.**" result="org.jinouts.org.xml.@1"/>
+    	<rule pattern="org.w3c.**" result="org.jinos.org.w3c.@1"/>
+    </jarjar>
+</target>
+	
+	<target name="combinejar" depends="modifyjar">
+		
+		<copy todir="${lib.dir}">
+		    <fileset dir="${mod-lib.dir}"/>
+		</copy>
+
+	    <taskdef name="jarjar" classname="com.tonicsystems.jarjar.JarJarTask"
+	        classpath="${lib.dir}/jarjar-1.1.jar"/>
+	    <jarjar jarfile="${mod-lib.dir}/android-ws-combine.jar">
+	       
+	        <!--com.sun.xml.ws.spi.ProviderImpl <zipfileset src="lib/jaxb-api.jar"/> -->
+	    	<zipgroupfileset dir="${lib.dir}" includes="jaxws-api-mod-2.2.1.jar,
+									    		jws-api.jar,
+	    							    		jaxb-api-2.2.1.jar,
+	    										xml-apis.jar" />
+	    	
+	    	 </jarjar>
+	</target>	
+	
+	
+	<target name="modifyjar" depends="cleanMod">
+		<echo message="Making jar for jaxws-api-2.2.1.jar " />
+
+		 <jar update="yes"  jarfile="${mod-lib.dir}/jaxws-api-mod-2.2.1.jar">
+		      <zipfileset src="${lib.dir}/jaxws-api-2.2.1.jar" 
+		      	excludes="javax/xml/ws/wsaddressing/package-info.class"/>
+		 	
+		 	 		     
+		  </jar>
+			
+		
+		
+	</target>
+	
+	<target name="makeSoapUIjar" >
+				<echo message="Make soap UI Jar" />
+			
+				<jar  description="Make soap UI Jar"   jarfile="${dist.dir}/soapUI.jar">
+					 													
+						 <fileset dir="${classes.dir}" includes="com/eviware/**"/>		
+				</jar>		
+	</target>
+	
+	
+	<target name="cleanMod">
+			<delete dir="${mod-lib.dir}" />
+			
+	</target>
+
+	 
+</project>
