@@ -11,7 +11,7 @@
 		
 			<jar  description="Make Jinouts WS Jar"   jarfile="lib/jinouts-ws.jar">
 				 													
-					 <fileset dir="${classes.dir}" includes="org/jinouts/**,hu/**" excludes="org/jinos/ws/client/**"/>		
+					 <fileset dir="${classes.dir}" includes="org/jinouts/**,hu/**" excludes="org/jinouts/ws/client/**"/>		
 			</jar>		
 	</target>
  
