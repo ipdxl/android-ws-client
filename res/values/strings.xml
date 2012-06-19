@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, AndProxyClientActivity!</string>
+    <string name="app_name">AndProxyClient</string>
+    <string name="login">login</string>
+    <string name="userLabel">"User Name "</string>
+    <string name="passwdLabel">"Password : "</string>
+    <color name="bgColor">#3399CC</color>
+
+</resources>
