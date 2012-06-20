@@ -9,7 +9,7 @@ I am happy to have finished that task. I would be happier if it comes to any use
 
 To use this "Android Web Service Client Generation tool", we have to follow the following steps :
 
-1. Get the "android-ws-client-1.0.0.zip" file from the download link of this project( "http://code.google.com/p/android-ws-client/downloads/list" ).
+1. Get the "androidWSClientGenDist-1.2.0.zip" file from the download link of this project( "http://code.google.com/p/android-ws-client/downloads/list" ).
 
 2. Unzip it and run the "runJinoutsAndroidWSClient.bat" batch file.
 
