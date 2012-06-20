@@ -130,4 +130,4 @@ Look, here I have shown the response in another text View.
  * And definitely I have used some third party jars which are explicitly in the project.
 
 
-So, that's all. Hope, In android web service development out life will be a little bit easier if you used this !!! Let's try it !!!!
+So, that's all. Hope, In android web service development our life will be a little bit easier if you used this !!! Let's try it !!!!
