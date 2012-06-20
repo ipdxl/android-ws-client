@@ -25,7 +25,7 @@ To use this "Android Web Service Client Generation tool", we have to follow the 
 
 8. To get this web service get the project "JinoutsWebService.zip" from the download tab and run the test class "WebServiceRunner". Your service is exposed. To check this in your browser hit in this url "http://116.68.194.105:9010/LoginService?WSDL", you will see the wsdl if its successfully exposed. So, your web service is exposed now.
 
-9. Now the time has come to consume this service using the client stub.Lets create the android project named "AndroidWSApp", From this project we like to consume the login service. Use step 1-6 to get the client stub for this service.
+9. Now the time has come to consume this service using the client stub.Lets create the android project named "AndroidWSSampleApp-1.2.0", From this project we like to consume the login service. Use step 1-6 to get the client stub for this service.
 
 10. Create two text field "user name" and "password"  and a button to login. In the button "onClick" lets put "callWebService". Lets create a function named "callWebService" in the activity class to implement this, So that  when a user click this button with the user name and password this method will be called.
 
@@ -117,7 +117,7 @@ respTextView.setText ( "Couldn't get Response" );
 }}}
 Look, here I have shown the response in another text View.
 
-14. You can get the full project - "AndroidWSApp.zip" from the download tab. 
+14. You can get the full project - ""AndroidWSSampleApp-1.2.0.zip" from the download tab. 
 
 15. Acknowledgement :
     
